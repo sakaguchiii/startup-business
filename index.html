@@ -388,6 +388,116 @@
             font-size: 0.9rem;
             margin-right: 8px;
         }
+
+        /* アニメーション要素のスタイル */
+        .count-up {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 15px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            transition: width 2s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+
+        .typing-effect {
+            overflow: hidden;
+            border-right: 3px solid #667eea;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+            display: inline-block;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #667eea; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .prediction-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border-left: 6px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .prediction-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .niche-item {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid #764ba2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .niche-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(118, 75, 162, 0.15);
+        }
+
+        .highlight-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
@@ -408,6 +518,8 @@
                 <li><a href="#success">成功要因分析</a></li>
                 <li><a href="#failure">失敗要因・リスク</a></li>
                 <li><a href="#howto">起業の進め方</a></li>
+                <li><a href="#future">2026年以降の予測</a></li>
+                <li><a href="#niche">ニッチ分野</a></li>
                 <li><a href="#resources">リソース集</a></li>
             </ul>
         </nav>
@@ -1444,6 +1556,389 @@
             </div>
         </section>
 
+        <!-- 2026年以降の予測 -->
+        <section id="future" class="section">
+            <h2>🔮 2026年以降のスタートアップ市場予測</h2>
+
+            <div class="highlight">
+                <h3>2027年までの政府目標</h3>
+                <p>2022年11月、内閣主導で「スタートアップ育成5か年計画」が発表され、<strong>2027年をめどにスタートアップに対する投資額を10兆円に増やし、将来的にはスタートアップの数を現在の10倍にする</strong>という野心的な計画が進行中です。</p>
+            </div>
+
+            <h3>📈 主要市場の成長予測（2026-2030年）</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>🤖 AI市場</h4>
+                    <p><strong>成長率：</strong>年率約30%（CAGR）</p>
+                    <p><strong>特徴：</strong>2024年から2030年にかけて指数関数的に成長。米国が最大シェアを占める見込み。</p>
+                    <p><strong>注目：</strong>AIネイティブ開発プラットフォームが主流に。<span class="trend-badge">🔥 超注目</span></p>
+                    <ul style="margin-top: 10px;">
+                        <li>2030年までに組織の80%がAIネイティブ開発プラットフォームを採用</li>
+                        <li>大規模エンジニアリングチームがAI増強された小規模チームに転換</li>
+                        <li>物理的作業以外の60%以上のタスクがAIで代替可能に</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>🌿 サーキュラーエコノミー</h4>
+                    <p><strong>2026年市場規模：</strong>7,127億ドル（約108兆円）</p>
+                    <p><strong>成長要因：</strong>環境意識の高まり、ESG投資の拡大</p>
+                    <ul style="margin-top: 10px;">
+                        <li>廃棄物を資源として再活用する循環型経済</li>
+                        <li>プラスチック代替素材の開発</li>
+                        <li>リサイクル技術の革新</li>
+                        <li>シェアリングエコノミーの拡大</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>🏥 デジタルヘルス</h4>
+                    <p><strong>2026年市場規模：</strong>3,848億ドル（約57.2兆円）</p>
+                    <p><strong>成長要因：</strong>高齢化、遠隔医療の普及、ウェアラブルデバイスの進化</p>
+                    <ul style="margin-top: 10px;">
+                        <li>遠隔診療の標準化</li>
+                        <li>AI診断支援システム</li>
+                        <li>個別化医療・予防医療</li>
+                        <li>ヘルスケアデータ解析</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>🚁 ドローン市場</h4>
+                    <p><strong>2026年市場規模：</strong>6,873億円（国内）</p>
+                    <p><strong>2022年比：</strong>2.2倍の成長</p>
+                    <ul style="margin-top: 10px;">
+                        <li>物流配送の自動化</li>
+                        <li>農業・点検業務の効率化</li>
+                        <li>災害対応・救助活動</li>
+                        <li>空飛ぶクルマ（eVTOL）の実用化</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="typing-effect">🌌 2030年代：クォンタム・エイジ（量子の時代）の到来</h3>
+
+            <div class="startup-card">
+                <h4>量子コンピューティング × AGI（汎用人工知能）</h4>
+                <div class="tag">ゲームチェンジャー</div>
+                <div class="tag">2030年代</div>
+                <div class="tag">パラダイムシフト</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">AGI実現時期の予測</h4>
+                <p>業界リーダーたちの予測は分かれています：</p>
+                <ul>
+                    <li><strong>楽観的予測：</strong>2026-2027年にAGI到達の可能性</li>
+                    <li><strong>中間予測：</strong>2030年頃に50%の確率でAGI誕生</li>
+                    <li><strong>IBM予測：</strong>2030-2050年以降まで幅広く分散</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">量子コンピューティングのマイルストーン</h4>
+                <ul>
+                    <li><strong>2029年目標：</strong>Google・IBMがフォールトトレラント（耐障害性）量子コンピュータ実現</li>
+                    <li><strong>2033年目標：</strong>IBM が10万量子ビットシステム実現</li>
+                    <li><strong>2030年代：</strong>AIと量子コンピューターが融合する「クォンタム・エイジ」が到来</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">注目スタートアップ</h4>
+                <ul>
+                    <li><span class="company-logo">Jij</span>（日本）- 量子技術で複雑な問題を解くソフトウェア開発（東京・イギリス拠点）</li>
+                    <li><span class="company-logo">QuEra Computing</span>（米国）- ハーバード大学発の量子コンピューター開発</li>
+                    <li><span class="company-logo">KandaQuantum</span>（日本）- 量子AGIプロジェクト「ツクヨミ」開発中</li>
+                </ul>
+            </div>
+
+            <h3>🎯 2026年トレンド予測</h3>
+
+            <div class="info">
+                <h4>「苦労キャンセル」界隈に注目</h4>
+                <p>2026年のヒットは「苦労キャンセル界隈」に登場しそうです：</p>
+                <ul>
+                    <li><strong>生成AIが瞬時に支援：</strong>翻訳、買い物、情報検索などをAIが瞬時にサポート</li>
+                    <li><strong>タイパ（タイムパフォーマンス）の劇的向上：</strong>時間をかけずに高品質な成果を得られる</li>
+                    <li><strong>自動化の加速：</strong>日常の「面倒くさい」作業をAIが代行</li>
+                    <li><strong>エッジAIの普及：</strong>クラウドではなく端末側でAI処理、プライバシー保護とレスポンス向上</li>
+                </ul>
+            </div>
+
+            <h3>📊 投資額の推移予測（カウントアップグラフ）</h3>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="number count-up" data-target="7793">0</div>
+                    <div class="label">2024年<br>（億円）</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%" data-width="78%"></div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="number count-up" data-target="9300">0</div>
+                    <div class="label">2025年予測<br>（億円）</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%" data-width="93%"></div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="number count-up" data-target="10000">0</div>
+                    <div class="label">2027年目標<br>（億円）</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%" data-width="100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>🌏 グローバル市場の展望</h3>
+
+            <div class="warning">
+                <h4>⚠️ 日本の課題</h4>
+                <ul>
+                    <li><strong>ユニコーン企業数：</strong>米国703社、中国340社に対し、日本はわずか8社</li>
+                    <li><strong>グローバル展開：</strong>初期から世界市場を見据えた戦略が必須</li>
+                    <li><strong>人材確保：</strong>世界トップクラスの人材獲得競争が激化</li>
+                    <li><strong>規制対応：</strong>AI、量子技術などの新技術に対する規制整備が必要</li>
+                </ul>
+            </div>
+
+            <div class="success">
+                <h3>✅ 2030年に向けて準備すべきこと</h3>
+                <ul>
+                    <li><strong>AI人材の育成：</strong>AIネイティブ世代の採用とトレーニング</li>
+                    <li><strong>量子技術の研究：</strong>量子コンピューティングの基礎知識を習得</li>
+                    <li><strong>グローバルネットワーク：</strong>海外パートナー、投資家との関係構築</li>
+                    <li><strong>持続可能性：</strong>ESG、SDGsを組み込んだビジネスモデル</li>
+                    <li><strong>データ活用：</strong>ビッグデータ、データサイエンスの活用</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ニッチ分野 -->
+        <section id="niche" class="section">
+            <h2>💎 ニッチ市場で勝つ！おすすめ分野 2025-2030</h2>
+
+            <div class="highlight">
+                <h3>なぜニッチ市場なのか？</h3>
+                <p>大企業が参入しない<strong>「規模は小さいが確実に需要がある市場」</strong>で、競合ゼロの独占状態を作り出せます。no-code、AI、D2C技術の進化により、小資本でも高品質なサービスを提供できる時代になりました。</p>
+            </div>
+
+            <div class="info">
+                <h4>大企業が参入しない理由＝チャンス</h4>
+                <ul>
+                    <li><strong>規模の経済が働かない：</strong>市場規模が小さく、大企業には利益が見合わない</li>
+                    <li><strong>労働集約的：</strong>人手がかかり、自動化しづらい</li>
+                    <li><strong>専門性が高い：</strong>深い業界知識・ノウハウが必要</li>
+                    <li><strong>カスタマイズが必要：</strong>顧客ごとに異なる対応が求められる</li>
+                </ul>
+            </div>
+
+            <h3>🎯 超ニッチ！おすすめ市場 TOP 10</h3>
+
+            <div class="startup-card">
+                <h4>1. シニア向けオンライン習い事 <span class="trend-badge">🔥 急成長</span></h4>
+                <div class="tag">高齢化社会</div>
+                <div class="tag">オンライン</div>
+                <div class="tag">低競合</div>
+
+                <h4 style="margin-top: 20px; color: #667eea;">ターゲット例</h4>
+                <p>「孫と一緒に遊べるようになりたい60代」「脳トレを楽しみたい70代」</p>
+
+                <h4 style="margin-top: 15px; color: #667eea;">サービス例</h4>
+                <ul>
+                    <li>ゲーム講座（マインクラフト、あつまれどうぶつの森等）</li>
+                    <li>脳トレアプリの使い方教室</li>
+                    <li>スマホ写真編集レッスン</li>
+                    <li>オンライン囲碁・将棋教室</li>
+                </ul>
+
+                <h4 style="margin-top: 15px; color: #667eea;">市場性</h4>
+                <p><strong>65歳以上人口：</strong>約3,600万人、<strong>インターネット利用率：</strong>年々上昇中</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>2. 業界特化型マイクロSaaS</h4>
+                <div class="tag">B2B</div>
+                <div class="tag">SaaS</div>
+                <div class="tag">業界特化</div>
+
+                <h4 style="margin-top: 20px; color: #667eea;">ターゲット例</h4>
+                <ul>
+                    <li>「建設現場の日報管理」に特化したアプリ</li>
+                    <li>「リフォーム業者向け」見積もり・図面作成ツール</li>
+                    <li>「小規模飲食店向け」在庫・シフト管理システム</li>
+                    <li>「美容院向け」予約・顧客管理・DM配信</li>
+                </ul>
+
+                <h4 style="margin-top: 15px; color: #667eea;">成功のポイント</h4>
+                <ul>
+                    <li>Excel・紙で管理している業界を狙う</li>
+                    <li>月額5,000円～2万円程度の価格設定</li>
+                    <li>業界特有の機能に特化</li>
+                    <li>ユーザーコミュニティで口コミ拡大</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>3. 食事制限者向け専門食品 D2C</h4>
+                <div class="tag">ヘルスケア</div>
+                <div class="tag">D2C</div>
+                <div class="tag">サブスク</div>
+
+                <h4 style="margin-top: 20px; color: #667eea;">ターゲット例</h4>
+                <ul>
+                    <li>グルテンフリー食品（セリアック病患者向け）</li>
+                    <li>低糖質・ケトジェニック食品</li>
+                    <li>完全ヴィーガン食品</li>
+                    <li>アレルギー対応食品（27品目完全除去等）</li>
+                </ul>
+
+                <h4 style="margin-top: 15px; color: #667eea;">ビジネスモデル</h4>
+                <ul>
+                    <li>月額サブスクリプション（月5,000円～1万円）</li>
+                    <li>定期宅配サービス</li>
+                    <li>カスタマイズ可能なセット販売</li>
+                    <li>オンラインコミュニティ運営</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>4. 地域密着型コミュニティサービス</h4>
+                <div class="tag">地域創生</div>
+                <div class="tag">コミュニティ</div>
+                <div class="tag">オフライン×オンライン</div>
+
+                <h4 style="margin-top: 20px; color: #667eea;">サービス例</h4>
+                <ul>
+                    <li>「〇〇市限定」の地域情報・イベントアプリ</li>
+                    <li>地域の農家と消費者を直接つなぐプラットフォーム</li>
+                    <li>ご近所スキルシェア（DIY、料理、育児等）</li>
+                    <li>地域限定フリマ・物々交換アプリ</li>
+                </ul>
+
+                <h4 style="margin-top: 15px; color: #667eea;">成功要因</h4>
+                <p>全国展開は目指さず、<strong>1つの地域で圧倒的No.1</strong>になることに集中。地域の信頼を得れば、口コミで広がりやすい。</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>5. ペット特化型サービス</h4>
+                    <ul>
+                        <li>「爬虫類専門」のペット用品EC</li>
+                        <li>「大型犬専用」のペットホテル</li>
+                        <li>ペット見守りカメラ×健康管理</li>
+                        <li>ペット専門オンライン獣医相談</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>市場：</strong>ペット関連市場1.7兆円</p>
+                </div>
+
+                <div class="card">
+                    <h4>6. 趣味特化型マーケットプレイス</h4>
+                    <ul>
+                        <li>「レトロゲーム」専門フリマ</li>
+                        <li>「鉄道模型」専門EC</li>
+                        <li>「サボテン・多肉植物」専門販売</li>
+                        <li>「アウトドアギアレンタル」特化</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>戦略：</strong>マニアックな分野ほど熱量が高く、顧客単価も高い</p>
+                </div>
+
+                <div class="card">
+                    <h4>7. 職人・専門技術者向けツール</h4>
+                    <ul>
+                        <li>左官職人向け施工管理アプリ</li>
+                        <li>電気工事士向け図面作成ツール</li>
+                        <li>配管工向け部材発注システム</li>
+                        <li>造園業者向け3D設計ツール</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>特徴：</strong>デジタル化が遅れている業界を狙う</p>
+                </div>
+
+                <div class="card">
+                    <h4>8. サステナブル・エシカル商品</h4>
+                    <ul>
+                        <li>再生素材100%のファッション</li>
+                        <li>フェアトレード特化EC</li>
+                        <li>アップサイクル家具・雑貨</li>
+                        <li>ゼロウェイスト生活用品</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>成長性：</strong>Z世代・ミレニアル世代の強い支持</p>
+                </div>
+
+                <div class="card">
+                    <h4>9. マイクロラーニング教育</h4>
+                    <ul>
+                        <li>「3分で学ぶ〇〇」動画コンテンツ</li>
+                        <li>超特化型スキル教育（例：Excel VBA実践のみ）</li>
+                        <li>資格試験の頻出問題特訓アプリ</li>
+                        <li>ビジネス英会話「1フレーズ/日」</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>トレンド：</strong>短時間で成果が出る学習が人気</p>
+                </div>
+
+                <div class="card">
+                    <h4>10. ライフイベント特化型サービス</h4>
+                    <ul>
+                        <li>「終活」コンシェルジュサービス</li>
+                        <li>「離婚手続き」サポート</li>
+                        <li>「移住・Uターン」支援プラットフォーム</li>
+                        <li>「不登校児」向け学習支援</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>特徴：</strong>人生の重要な局面で必要とされる</p>
+                </div>
+            </div>
+
+            <h3>🎯 ニッチ市場で成功するための戦略</h3>
+
+            <div class="success">
+                <h4>✅ ライフル戦略（超絞り込み）</h4>
+                <p>ターゲットを極限まで絞り込む。例：</p>
+                <ul>
+                    <li>❌ 「中小企業向け会計ソフト」（広すぎる）</li>
+                    <li>✅ 「従業員50-100人の地方金属加工業で、2代目社長が技術継承と若手採用に悩んでいる企業向け生産管理システム」</li>
+                </ul>
+                <p style="margin-top: 15px;">このレベルまで絞り込むことで、顧客のニーズが手に取るように分かり、ピンポイントで刺さる製品が作れます。</p>
+            </div>
+
+            <div class="info">
+                <h4>✅ 深い顧客理解</h4>
+                <ul>
+                    <li>ターゲット顧客と最低50人は直接対話</li>
+                    <li>実際に現場に入り込んで観察（シャドーイング）</li>
+                    <li>業界専門用語を完全に理解</li>
+                    <li>顧客の「言語化されていない不満」を見つける</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <h4>⚠️ ニッチ市場の注意点</h4>
+                <ul>
+                    <li><strong>小さすぎる市場は避ける：</strong>最低でも年間10億円以上の市場規模が必要</li>
+                    <li><strong>拡張性を考慮：</strong>隣接市場への展開可能性を確認</li>
+                    <li><strong>支払い能力：</strong>顧客が実際に料金を払える市場か確認</li>
+                    <li><strong>競合の後追い：</strong>成功すると大手が参入する可能性を想定</li>
+                </ul>
+            </div>
+
+            <h3>💡 ニッチ市場発見のヒント</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>🔍 発見方法1: 不満を探す</h4>
+                    <p>SNS、掲示板、レビューサイトで「〇〇がない」「〇〇に困っている」という声を探す</p>
+                </div>
+                <div class="card">
+                    <h4>🔍 発見方法2: 組み合わせる</h4>
+                    <p>既存市場 × 特定属性（例：フィットネス × 産後ママ、英語学習 × エンジニア）</p>
+                </div>
+                <div class="card">
+                    <h4>🔍 発見方法3: 自分の経験</h4>
+                    <p>自分が過去に困ったこと、解決したいと思ったことが最強のヒント</p>
+                </div>
+                <div class="card">
+                    <h4>🔍 発見方法4: 海外トレンド</h4>
+                    <p>海外で流行っているが日本ではまだないサービスを探す（タイムマシン経営）</p>
+                </div>
+            </div>
+        </section>
+
         <!-- リソース集 -->
         <section id="resources" class="section">
             <h2>📚 起業・新規事業のリソース集</h2>
@@ -1714,6 +2209,99 @@
                     link.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
                     link.style.color = 'white';
                 }
+            });
+        });
+
+        // カウントアップアニメーション
+        function animateCountUp(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000; // 2秒
+            const increment = target / (duration / 16); // 60FPS
+            let current = 0;
+
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current).toLocaleString();
+                    requestAnimationFrame(updateCount);
+                } else {
+                    element.textContent = target.toLocaleString();
+                }
+            };
+
+            updateCount();
+        }
+
+        // プログレスバーアニメーション
+        function animateProgressBar(element) {
+            const targetWidth = element.getAttribute('data-width');
+            setTimeout(() => {
+                element.style.width = targetWidth;
+            }, 100);
+        }
+
+        // アニメーション用のIntersection Observer
+        const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+
+                    // カウントアップ要素
+                    if (element.classList.contains('count-up') && !element.dataset.animated) {
+                        element.dataset.animated = 'true';
+                        animateCountUp(element);
+                    }
+
+                    // プログレスバー要素
+                    if (element.classList.contains('progress-fill') && !element.dataset.animated) {
+                        element.dataset.animated = 'true';
+                        animateProgressBar(element);
+                    }
+
+                    // フェードインアニメーション
+                    if (element.classList.contains('prediction-card') ||
+                        element.classList.contains('niche-item')) {
+                        element.classList.add('animate-on-scroll');
+                    }
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // 全てのアニメーション要素を監視
+        document.addEventListener('DOMContentLoaded', () => {
+            // カウントアップ要素
+            document.querySelectorAll('.count-up').forEach(element => {
+                animationObserver.observe(element);
+            });
+
+            // プログレスバー要素
+            document.querySelectorAll('.progress-fill').forEach(element => {
+                animationObserver.observe(element);
+            });
+
+            // 予測カード
+            document.querySelectorAll('.prediction-card').forEach(element => {
+                animationObserver.observe(element);
+            });
+
+            // ニッチアイテム
+            document.querySelectorAll('.niche-item').forEach(element => {
+                animationObserver.observe(element);
+            });
+        });
+
+        // ホバーエフェクト強化
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.startup-card, .niche-item, .prediction-card');
+
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.01)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
             });
         });
     </script>
