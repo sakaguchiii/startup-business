@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スタートアップ・新規事業リサーチ 2024-2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            color: #1a1a1a;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+            border-radius: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        header .update-date {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #999;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid #667eea;
+            font-weight: 700;
+        }
+
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.8rem;
+            margin: 35px 0 20px 0;
+            padding-left: 20px;
+            border-left: 5px solid #764ba2;
+            font-weight: 600;
+        }
+
+        .section h4 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin: 20px 0 15px 0;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 6px solid #667eea;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .card h4 {
+            color: #667eea;
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .highlight h3 {
+            color: white;
+            border-left-color: white;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 220px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .stat-box .number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .stat-box .label {
+            color: #666;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .startup-card {
+            background: white;
+            padding: 40px;
+            margin: 25px 0;
+            border-radius: 15px;
+            border-left: 8px solid #764ba2;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .startup-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .startup-card h4 {
+            color: #764ba2;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .startup-card .tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin: 5px 8px 5px 0;
+            font-weight: 600;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+
+        li {
+            margin: 12px 0;
+            line-height: 1.9;
+        }
+
+        .warning {
+            background: #fff4e5;
+            border-left: 6px solid #ffa726;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .success {
+            background: #e8f5e9;
+            border-left: 6px solid #66bb6a;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .info {
+            background: #e3f2fd;
+            border-left: 6px solid #42a5f5;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .trend-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #000;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 10px;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            margin-top: 60px;
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                padding: 12px;
+                position: relative;
+                top: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            nav a {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 30px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            font-size: 1.5rem;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+        }
+
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .company-logo {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 スタートアップ・新規事業リサーチ 2024-2025</h1>
+        <p>最新トレンド、成功事例、投資動向を徹底分析</p>
+        <div class="update-date">📅 最終更新: 2024年12月 | データソース: 各種VC・スタートアップDB</div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#overview">市場概況</a></li>
+                <li><a href="#trends">2024-25トレンド</a></li>
+                <li><a href="#startups">注目スタートアップ</a></li>
+                <li><a href="#corporate">大企業新規事業</a></li>
+                <li><a href="#funding">資金調達・VC動向</a></li>
+                <li><a href="#success">成功要因分析</a></li>
+                <li><a href="#failure">失敗要因・リスク</a></li>
+                <li><a href="#howto">起業の進め方</a></li>
+                <li><a href="#resources">リソース集</a></li>
+            </ul>
+        </nav>
+
+        <!-- 市場概況 -->
+        <section id="overview" class="section">
+            <h2>📊 2024-2025年 スタートアップ市場概況</h2>
+
+            <div class="highlight">
+                <h3>市場全体のトレンド</h3>
+                <p>2024年の日本のスタートアップ資金調達総額は<strong>7,793億円</strong>（前年比+3%）と、ほぼ横ばいで推移。欧米ほど冷え込んでおらず、回復基調を示しています。下半期には50億円以上の大型案件が多く見られ、一社あたりの平均調達額が拡大しました。</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="number">7,793億円</div>
+                    <div class="label">2024年資金調達総額<br>(前年比+3%)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">2,869社</div>
+                    <div class="label">資金調達実施社数<br>(前年比+1%)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">8社</div>
+                    <div class="label">日本のユニコーン企業数<br>(2024年9月時点)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">10兆円</div>
+                    <div class="label">2027年目標投資額<br>(政府目標)</div>
+                </div>
+            </div>
+
+            <h3>政府の取り組み</h3>
+            <div class="success">
+                <h4>「スタートアップ創出元年」（2022年宣言）</h4>
+                <ul>
+                    <li><strong>スタートアップ育成5か年計画</strong>を策定</li>
+                    <li><strong>2027年までの目標：</strong>
+                        <ul>
+                            <li>スタートアップへの投資額を<strong>10兆円規模</strong>に拡大</li>
+                            <li>ユニコーン企業<strong>100社</strong>創出</li>
+                            <li>スタートアップ企業<strong>10万社</strong>創出</li>
+                        </ul>
+                    </li>
+                    <li><strong>重点領域：</strong>人材・ネットワーク構築、資金供給の強化、グローバル化、ディープテック企業の輩出</li>
+                </ul>
+            </div>
+
+            <h3>海外との比較</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>🇺🇸 アメリカ</h4>
+                    <p><strong>ユニコーン企業数：</strong>703社</p>
+                    <p><strong>特徴：</strong>スタンフォード大学、MITなど世界トップクラスの大学・研究機関との連携が強力。革新的なアイデアと優秀な人材が豊富。</p>
+                </div>
+                <div class="card">
+                    <h4>🇨🇳 中国</h4>
+                    <p><strong>ユニコーン企業数：</strong>340社</p>
+                    <p><strong>特徴：</strong>巨大な国内市場と政府の強力なバックアップ。モバイル決済、EC、AIなど急成長領域が多数。</p>
+                </div>
+                <div class="card">
+                    <h4>🇯🇵 日本</h4>
+                    <p><strong>ユニコーン企業数：</strong>8社</p>
+                    <p><strong>課題：</strong>新卒一括採用が主流で起業へのインセンティブが小さい。一度失敗するとリカバリーが難しい文化。VC投資額も米中と比較して少ない。</p>
+                </div>
+            </div>
+
+            <h3>投資ステージ別の動向</h3>
+            <div class="info">
+                <p><strong>2024年の特徴：</strong></p>
+                <ul>
+                    <li><strong>レイターステージ：</strong>大型調達が減少傾向</li>
+                    <li><strong>シード・アーリーステージ：</strong>投資が増加</li>
+                    <li><strong>傾向：</strong>実績あるスタートアップに資金が集まりやすい「優勝劣敗」が鮮明に</li>
+                    <li><strong>海外投資家：</strong>Khosla Ventures、NEAなど世界トップクラスのVCが日本市場に関心</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- トレンド -->
+        <section id="trends" class="section">
+            <h2>🔥 2024-2025年 注目トレンド</h2>
+
+            <div class="startup-card">
+                <h4>1. 生成AI（Generative AI）<span class="trend-badge">🔥 超注目</span></h4>
+                <div class="tag">市場拡大中</div>
+                <div class="tag">投資殺到</div>
+                <div class="tag">ゲームチェンジャー</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">市場規模</h4>
+                <ul>
+                    <li><strong>自律型AIエージェント市場：</strong>2024年 約8,007億円 → 2030年 約7兆3,947億円（予測）</li>
+                    <li><strong>世界のAI投資額：</strong>2024年 約1,500億ドル → 2025年 2,000億ドル規模に迫る（予測）</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">主要トレンド</h4>
+                <ul>
+                    <li><strong>エッジAI：</strong>クラウドではなくエッジ（端末）側で処理するAIの採用が拡大</li>
+                    <li><strong>AIエージェント時代：</strong>自律的に行動するAIエージェントが業務を代行</li>
+                    <li><strong>生成AI×ディープテック：</strong>AIを活用してディープテック領域を効率化・高度化</li>
+                    <li><strong>企業向けSaaS：</strong>生成AIを組み込んだ業務効率化ツールが急増</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">代表的なスタートアップ</h4>
+                <p><span class="company-logo">Sakana AI</span>2024年資金調達額1位（383.4億円）。小規模な生成AIモデルを効率的に組み合わせた新技術により、高性能かつ省エネルギーなAIを実現。</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>2. ディープテック（Deep Tech）<span class="trend-badge">🔥 政府支援強</span></h4>
+                <div class="tag">研究開発型</div>
+                <div class="tag">長期投資</div>
+                <div class="tag">社会課題解決</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">注目領域</h4>
+                <ul>
+                    <li><strong>AI・機械学習：</strong>基盤モデル、自然言語処理、画像認識</li>
+                    <li><strong>バイオテクノロジー：</strong>創薬、ゲノム編集、再生医療</li>
+                    <li><strong>量子コンピューティング：</strong>次世代計算技術</li>
+                    <li><strong>ロボティクス：</strong>産業用ロボット、サービスロボット</li>
+                    <li><strong>クリーンエネルギー：</strong>CCUS、DAC、水素エネルギー</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">政府支援</h4>
+                <ul>
+                    <li><strong>JIC・ベンチャー・グロース・インベストメンツ：</strong>政府系ファンドがLP出資を通じて研究開発型スタートアップへの投資を促進</li>
+                    <li><strong>「勝負の10年」：</strong>研究開発型スタートアップの成長期として政府が本腰を入れて支援</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>3. Web3・ブロックチェーン<span class="trend-badge">成熟期</span></h4>
+                <div class="tag">暗号資産</div>
+                <div class="tag">NFT</div>
+                <div class="tag">分散型</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">現状</h4>
+                <p>ガートナーのハイプサイクルによると、「Web3」「NFT」「メタバース」は<strong>「幻滅期」</strong>に位置していますが、2024年の暗号資産市場は米国でのビットコイン現物ETF承認を起点として大きな盛り上がりを見せました。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">2025年の展望</h4>
+                <ul>
+                    <li><strong>国家単位での暗号資産活用：</strong>各国政府が暗号資産を活用する動きが加速</li>
+                    <li><strong>日本の動き：</strong>国家戦略としての暗号資産取引所設立に向けた検討が進行中</li>
+                    <li><strong>実用化フェーズ：</strong>投機から実用へのシフトが進む</li>
+                </ul>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>4. ヘルスケア・医療Tech</h4>
+                    <ul>
+                        <li>医療ICT、遠隔医療</li>
+                        <li>予防医療・ウェルネス</li>
+                        <li>在宅医療支援</li>
+                        <li>医療機器開発</li>
+                    </ul>
+                    <p><strong>投資割合：</strong>全体の9.5%</p>
+                </div>
+                <div class="card">
+                    <h4>5. フィンテック</h4>
+                    <ul>
+                        <li>決済サービス</li>
+                        <li>マイクロファイナンス</li>
+                        <li>資産運用プラットフォーム</li>
+                        <li>金融インフラ</li>
+                    </ul>
+                    <p><strong>投資割合：</strong>全体の7.6%</p>
+                </div>
+                <div class="card">
+                    <h4>6. Climate Tech（気候変動技術）</h4>
+                    <ul>
+                        <li>CCUS（CO2回収・利用・貯留）</li>
+                        <li>DAC（直接空気回収）</li>
+                        <li>再生可能エネルギー</li>
+                        <li>カーボンクレジット</li>
+                    </ul>
+                    <p><strong>投資割合：</strong>VC投資全体の約10%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注目スタートアップ -->
+        <section id="startups" class="section">
+            <h2>🌟 2024年 注目スタートアップ事例</h2>
+
+            <div class="highlight">
+                <h3>2024年 資金調達ランキング TOP3</h3>
+                <p>日本のスタートアップで2024年に最も資金を集めた企業を紹介します。</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>🥇 1位: Sakana AI（サカナ エーアイ）</h4>
+                <div class="tag">生成AI</div>
+                <div class="tag">基盤モデル</div>
+                <div class="tag">ユニコーン</div>
+                <div class="tag">2024年資金調達: 383.4億円</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>小規模な生成AIモデルを効率的に組み合わせた新技術により、高性能かつ省エネルギーなAIの実現を目指すAI研究開発企業。2023年7月設立。</p>
+                <p>多数の小型AIモデル同士を効率的に連携させることで、巨大な計算資源に依存することなく、高度な適用能力を備えたAIモデルを構築しています。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">調達実績</h4>
+                <ul>
+                    <li><strong>2024年累計：</strong>383.4億円（年間調達額1位）</li>
+                    <li><strong>シリーズA：</strong>約300億円（NEC、富士通など国内大手企業が出資）</li>
+                    <li><strong>2025年1月：</strong>追加で200億円調達、企業価値4,000億円に（国内スタートアップ最高）</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功要因</h4>
+                <ul>
+                    <li>独自の技術アプローチ（小型モデルの効率的連携）</li>
+                    <li>世界トップクラスのAI研究者チーム</li>
+                    <li>環境負荷の少ない持続可能なAI</li>
+                    <li>海外投資家からの高い評価（Khosla Ventures等）</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>🥈 2位: 五常・アンド・カンパニー</h4>
+                <div class="tag">マイクロファイナンス</div>
+                <div class="tag">途上国支援</div>
+                <div class="tag">金融包摂</div>
+                <div class="tag">2024年資金調達: 334.3億円</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>途上国においてマイクロファイナンスを展開し、金融包摂を促進する「民間版の世界銀行」。インド、カンボジア、スリランカ、ミャンマー、タジキスタンの5カ国で9社のグループ会社を通じて活動。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">規模</h4>
+                <ul>
+                    <li><strong>グループ従業員：</strong>1万人超（2024年3月時点）</li>
+                    <li><strong>融資顧客数：</strong>240万人（女性比率95%超）</li>
+                    <li><strong>連結融資残高：</strong>1,200億円突破</li>
+                    <li><strong>目標：</strong>2030年までに50カ国1億人以上へのサービス提供</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">調達実績</h4>
+                <ul>
+                    <li><strong>2024年10月：</strong>シリーズFラウンドで175億円調達</li>
+                    <li><strong>デット調達：</strong>国内金融機関6社より159億円</li>
+                    <li><strong>累計資本調達額：</strong>465億円（2014年創業から）</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功要因</h4>
+                <ul>
+                    <li>明確な社会課題解決（貧困層への金融アクセス提供）</li>
+                    <li>途上国での確実な成長市場</li>
+                    <li>高い女性比率（95%超）による社会的インパクト</li>
+                    <li>投信マネーなど多様な資金調達手法</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>🥉 3位: newmo（ニューモ）</h4>
+                <div class="tag">ライドシェア</div>
+                <div class="tag">地域交通</div>
+                <div class="tag">急成長</div>
+                <div class="tag">2024年資金調達: 187億円（累計）</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>"利用者視点に立ったサステナブルな地域交通"の実現を目指し、タクシー・ライドシェア事業を展開。2024年1月設立の超新星スタートアップ。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成長スピード</h4>
+                <ul>
+                    <li><strong>創業：</strong>2024年1月（設立わずか10ヶ月で200億円調達）</li>
+                    <li><strong>シリーズA 1stクローズ：</strong>100億円超を調達</li>
+                    <li><strong>シリーズA追加：</strong>主力VC27社が参加し167億円</li>
+                    <li><strong>累計調達額：</strong>約187億円</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業拡大</h4>
+                <ul>
+                    <li><strong>2024年3月：</strong>大阪のタクシー事業者「岸交」の経営権取得</li>
+                    <li><strong>2024年7月：</strong>「未来都」の経営権取得</li>
+                    <li><strong>現在の規模：</strong>タクシー車両600台以上、従業員1,000人以上</li>
+                    <li><strong>2024年11月：</strong>名古屋で「newmo東海」、沖縄で「newmo沖縄」新会社設立</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功要因</h4>
+                <ul>
+                    <li>規制緩和のタイミングを的確に捉えた</li>
+                    <li>地域交通という社会課題に正面から取り組む</li>
+                    <li>M&Aを活用した急速な事業拡大</li>
+                    <li>世界トップクラスのVCからの支持</li>
+                </ul>
+            </div>
+
+            <h3>その他の注目スタートアップ</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>SmartHR</h4>
+                    <div class="tag">HR Tech</div>
+                    <div class="tag">ユニコーン</div>
+                    <p><strong>事業：</strong>クラウド型人事労務管理ソフトウェア</p>
+                    <p><strong>シェア：</strong>労務管理クラウド部門でNo.1シェアを3年連続獲得</p>
+                    <p><strong>ミッション：</strong>"well-working" - 働くにまつわる社会課題をなくし、誰もが自分らしく働ける社会を作る</p>
+                </div>
+                <div class="card">
+                    <h4>freee</h4>
+                    <div class="tag">会計SaaS</div>
+                    <div class="tag">上場企業</div>
+                    <p><strong>事業：</strong>クラウド会計ソフト、人事労務ソフト</p>
+                    <p><strong>特徴：</strong>ARR倍率44.6倍と国内SaaS企業の中でも高い評価</p>
+                    <p><strong>ビジョン：</strong>スモールビジネスを、世界の主役に</p>
+                </div>
+                <div class="card">
+                    <h4>Sansan</h4>
+                    <div class="tag">名刺管理</div>
+                    <div class="tag">上場企業</div>
+                    <p><strong>事業：</strong>法人向け名刺管理サービス、個人向け名刺アプリ「Eight」</p>
+                    <p><strong>特徴：</strong>国内SaaSの雄として資本政策のベンチマーク</p>
+                    <p><strong>ミッション：</strong>ビジネスインフラになる</p>
+                </div>
+                <div class="card">
+                    <h4>ラクスル</h4>
+                    <div class="tag">印刷プラットフォーム</div>
+                    <div class="tag">上場企業</div>
+                    <p><strong>事業：</strong>印刷・物流のシェアリングプラットフォーム</p>
+                    <p><strong>ビジョン：</strong>仕組みを変えれば、世界はもっと良くなる</p>
+                    <p><strong>特徴：</strong>印刷、物流など複数業界で国内No.1シェア達成</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 大企業新規事業 -->
+        <section id="corporate" class="section">
+            <h2>🏢 大企業の新規事業事例 2024-2025</h2>
+
+            <div class="info">
+                <p>大企業が新規事業を立ち上げる動きが活発化しています。既存事業とは異なるアプローチで、イノベーションを追求する事例を紹介します。</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>日本製鉄 × KAMAMESHI</h4>
+                <div class="tag">製造業DX</div>
+                <div class="tag">リソースシェア</div>
+                <div class="tag">社内起業</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>中小製造業の設備老朽化や部品調達の課題に対し、企業間のリソースシェアリングを促進するプラットフォーム「KAMAMESHI」を立ち上げ。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">背景</h4>
+                <ul>
+                    <li>中小製造業の設備投資負担が重い</li>
+                    <li>遊休設備の有効活用ができていない</li>
+                    <li>部品調達が非効率</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">ソリューション</h4>
+                <ul>
+                    <li>企業間で設備をシェアするプラットフォーム</li>
+                    <li>稼働率の向上とコスト削減を同時実現</li>
+                    <li>日本製鉄のネットワークを活用</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>味の素 × A-STARTERS</h4>
+                <div class="tag">社内起業制度</div>
+                <div class="tag">ヘルスケア</div>
+                <div class="tag">新規事業創出</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>新規事業創出プログラム「A-STARTERS」第1号案件として、個人の健康状態に合わせた栄養管理サービス「LaboMe®」を事業化。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">特徴</h4>
+                <ul>
+                    <li>社員のアイデアから事業化</li>
+                    <li>味の素の栄養研究ノウハウを活用</li>
+                    <li>パーソナライズドヘルスケア市場に参入</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>吉野家 × イントレプレナー塾</h4>
+                <div class="tag">高齢者向け</div>
+                <div class="tag">介護食</div>
+                <div class="tag">社会課題解決</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>「イントレプレナー塾」参加者が「やさしいごはんシリーズ」を事業化。高齢者向けの食べやすい食事を提供。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">背景</h4>
+                <ul>
+                    <li>高齢化社会の進展</li>
+                    <li>介護食・嚥下食へのニーズ増加</li>
+                    <li>吉野家ブランドの新しい活用方法を模索</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>NTTドコモ × docomo STARTUP</h4>
+                <div class="tag">ファッションTech</div>
+                <div class="tag">AI活用</div>
+                <div class="tag">新規事業創出</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>新規事業創出プログラム「docomo STARTUP」を通じて、AIを活用したファッションコーディネートサービス「coordimate」を誕生させる。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">特徴</h4>
+                <ul>
+                    <li>AIによるパーソナライズドコーディネート提案</li>
+                    <li>NTTドコモの技術力を活用</li>
+                    <li>新しい顧客体験の創造</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>ホンダ × ホンダジェット</h4>
+                <div class="tag">航空機事業</div>
+                <div class="tag">グローバル展開</div>
+                <div class="tag">長期投資</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">事業内容</h4>
+                <p>小型ビジネスジェット機「ホンダジェット」の開発・販売。2024年2月時点で累計250機のデリバリーを達成し、小型ビジネスジェット機カテゴリーで2年連続世界首位を獲得。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功要因</h4>
+                <ul>
+                    <li><strong>30年以上の長期投資：</strong>短期的な利益にとらわれず、技術開発に集中</li>
+                    <li><strong>独自技術：</strong>主翼上面エンジン配置など革新的設計</li>
+                    <li><strong>グローバル展開：</strong>最初から世界市場を見据えた事業設計</li>
+                    <li><strong>ブランド力：</strong>Hondaの技術力とブランドを活用</li>
+                </ul>
+            </div>
+
+            <h3>大企業の新規事業成功のポイント</h3>
+            <div class="success">
+                <ul>
+                    <li><strong>社内起業制度の整備：</strong>社員が自由に提案できる仕組み</li>
+                    <li><strong>既存リソースの活用：</strong>技術力、ネットワーク、ブランドを最大活用</li>
+                    <li><strong>長期的視点：</strong>短期的な利益よりも長期的価値創造を重視</li>
+                    <li><strong>社会課題解決：</strong>収益性だけでなく社会的意義を追求</li>
+                    <li><strong>専門チームの設立：</strong>既存事業とは独立した組織で運営</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 資金調達・VC動向 -->
+        <section id="funding" class="section">
+            <h2>💰 資金調達・VC投資動向 2024-2025</h2>
+
+            <div class="highlight">
+                <h3>2024年 投資市場の全体像</h3>
+                <p>2024年の日本のスタートアップ投資市場は、欧米ほど冷え込んでおらず、緩やかに回復基調にあります。実績あるスタートアップに資金が集まる「優勝劣敗」が鮮明になっています。</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="number">3,870億円</div>
+                    <div class="label">2024年VC投資総額<br>(前年比+27%)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">41.7%</div>
+                    <div class="label">IT・ソフトウェア分野<br>(最大セクター)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">10%</div>
+                    <div class="label">Climate Tech<br>(VC投資全体に占める割合)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">+20%</div>
+                    <div class="label">2025年予測成長率<br>(前年比)</div>
+                </div>
+            </div>
+
+            <h3>投資領域別の動向</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>1. AI・生成AI分野（最注目）</h4>
+                    <p><strong>投資割合：</strong>IT・ソフトウェアの中でも最大</p>
+                    <ul>
+                        <li>基盤モデル開発</li>
+                        <li>生成AIアプリケーション</li>
+                        <li>AIエージェント</li>
+                        <li>企業向けAI-SaaS</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>代表例：</strong>Sakana AI（383億円調達）</p>
+                </div>
+                <div class="card">
+                    <h4>2. ヘルスケア・医療</h4>
+                    <p><strong>投資割合：</strong>全体の9.5%</p>
+                    <ul>
+                        <li>医療ICT</li>
+                        <li>予防医療・ウェルネス</li>
+                        <li>在宅医療支援技術</li>
+                        <li>医療機器開発</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>3. フィンテック</h4>
+                    <p><strong>投資割合：</strong>全体の7.6%</p>
+                    <ul>
+                        <li>決済サービス</li>
+                        <li>マイクロファイナンス</li>
+                        <li>資産運用プラットフォーム</li>
+                        <li>金融インフラ</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>代表例：</strong>五常・アンド・カンパニー（334億円調達）</p>
+                </div>
+                <div class="card">
+                    <h4>4. Climate Tech</h4>
+                    <p><strong>投資割合：</strong>VC投資全体の約10%</p>
+                    <ul>
+                        <li>CCUS（CO2回収・利用・貯留）</li>
+                        <li>DAC（直接空気回収技術）</li>
+                        <li>再生可能エネルギー</li>
+                        <li>カーボンクレジット</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>トレンド：</strong>比較的堅調に推移</p>
+                </div>
+            </div>
+
+            <h3>投資ステージ別の特徴</h3>
+
+            <div class="startup-card">
+                <h4>シード・アーリーステージ</h4>
+                <div class="tag">投資増加</div>
+                <div class="tag">リスクテイク</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">傾向</h4>
+                <ul>
+                    <li><strong>投資件数：</strong>増加傾向</li>
+                    <li><strong>平均調達額：</strong>3,000万円～3億円程度</li>
+                    <li><strong>投資家：</strong>エンジェル投資家、シードVC、CVC</li>
+                    <li><strong>重視される点：</strong>チーム、技術力、市場性</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>シリーズA～Bステージ</h4>
+                <div class="tag">選別強化</div>
+                <div class="tag">PMF重視</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">傾向</h4>
+                <ul>
+                    <li><strong>投資件数：</strong>やや減少（選別が厳しく）</li>
+                    <li><strong>平均調達額：</strong>5億円～30億円程度</li>
+                    <li><strong>投資家：</strong>国内大手VC、海外VC</li>
+                    <li><strong>重視される点：</strong>PMF達成、トラクション、グロース戦略</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>レイターステージ</h4>
+                <div class="tag">大型調達減少</div>
+                <div class="tag">上場準備</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">傾向</h4>
+                <ul>
+                    <li><strong>投資件数：</strong>減少傾向</li>
+                    <li><strong>平均調達額：</strong>30億円以上</li>
+                    <li><strong>投資家：</strong>大手VC、事業会社、PEファンド</li>
+                    <li><strong>重視される点：</strong>収益性、上場可能性、M&A戦略</li>
+                </ul>
+            </div>
+
+            <h3>海外投資家の動向</h3>
+            <div class="info">
+                <h4>世界トップクラスのVCが日本市場に参入</h4>
+                <ul>
+                    <li><strong>Khosla Ventures：</strong>Sakana AIに投資</li>
+                    <li><strong>NEA（New Enterprise Associates）：</strong>日本のAI企業に関心</li>
+                    <li><strong>Atomico（アトミコ）：</strong>キャディのリード投資家</li>
+                    <li><strong>トレンド：</strong>欧米の著名VCが日本のディープテック・AI企業に積極投資</li>
+                </ul>
+            </div>
+
+            <h3>M&A・セカンダリー取引の活発化</h3>
+            <div class="success">
+                <p><strong>2024年の特徴：</strong></p>
+                <ul>
+                    <li>事業法人の直接投資は減少したものの、設立ファンド額は増加</li>
+                    <li>セカンダリー取引（既存株主から株式を買い取る取引）が活発化</li>
+                    <li>買収も活発化しており、スタートアップへの関心は依然として高い水準を維持</li>
+                    <li>Exit（出口戦略）の多様化が進む</li>
+                </ul>
+            </div>
+
+            <h3>2025年の投資展望</h3>
+            <div class="highlight">
+                <h3>緩やかな回復継続</h3>
+                <ul>
+                    <li>マクロ経済の回復とともに少しずつスタートアップ投資は回復していく見込み</li>
+                    <li>2024年には投資が緩やかに回復し、前年比20％増加</li>
+                    <li>2025年も同様のペースで成長が期待される</li>
+                    <li>AI・ディープテック領域への投資は引き続き堅調</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 成功要因分析 -->
+        <section id="success" class="section">
+            <h2>✅ スタートアップ成功要因分析</h2>
+
+            <div class="highlight">
+                <h3>成功するスタートアップの共通点</h3>
+                <p>2024-2025年の成功事例から導き出された、スタートアップが成功するための重要な要素を分析します。</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>1. PMF（Product-Market Fit）への徹底的な集中</h4>
+                <div class="tag">最重要</div>
+                <div class="tag">顧客理解</div>
+                <div class="tag">高速PDサイクル</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">PMFとは？</h4>
+                <p>製品が市場に受け入れられ、顧客が本当に求めている価値を提供できている状態。スタートアップの成否を分ける最も重要な指標。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">PMF達成のための行動</h4>
+                <ul>
+                    <li><strong>「PMFするまでコードを書くこととユーザーの声を聞くこと以外、なにもするな」</strong></li>
+                    <li><strong>顧客インタビュー：</strong>最低100人以上の潜在顧客と対話</li>
+                    <li><strong>プロトタイプの高速開発：</strong>1-2週間で試作品を作成</li>
+                    <li><strong>フィードバックループ：</strong>顧客の声を即座に製品に反映</li>
+                    <li><strong>定量測定：</strong>NPS、リテンション率、アクティブユーザー数を常にモニタリング</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">PMF達成の兆候</h4>
+                <ul>
+                    <li>解約率（Churn Rate）が5%以下</li>
+                    <li>NPS（Net Promoter Score）が50以上</li>
+                    <li>オーガニックでの顧客獲得が増加</li>
+                    <li>顧客が自発的に他の人に勧めてくれる</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>2. 優秀なチームの構築</h4>
+                <div class="tag">人材</div>
+                <div class="tag">カルチャー</div>
+                <div class="tag">多様性</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功するチームの特徴</h4>
+                <ul>
+                    <li><strong>補完的なスキルセット：</strong>技術、ビジネス、デザインのバランス</li>
+                    <li><strong>共通のビジョン：</strong>チーム全員が同じ方向を向いている</li>
+                    <li><strong>高い実行力：</strong>計画だけでなく、実際に動ける</li>
+                    <li><strong>学習意欲：</strong>新しい技術・知識を貪欲に吸収</li>
+                    <li><strong>レジリエンス：</strong>困難に直面しても諦めない</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">世界トップクラスの人材獲得</h4>
+                <p><strong>成功事例：</strong>Sakana AIは世界トップクラスのAI研究者を集めることで、わずか1年でユニコーンに到達しました。</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>3. 明確な差別化・独自技術</h4>
+                <div class="tag">イノベーション</div>
+                <div class="tag">競合優位性</div>
+                <div class="tag">参入障壁</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">差別化の方法</h4>
+                <ul>
+                    <li><strong>技術的優位性：</strong>独自の技術・特許で競合を圧倒（例: Sakana AIの小型モデル連携技術）</li>
+                    <li><strong>ビジネスモデル：</strong>全く新しい収益構造の構築（例: ラクスルのシェアリングモデル）</li>
+                    <li><strong>ユーザー体験：</strong>圧倒的に使いやすいUI/UX（例: SmartHRの直感的な操作性）</li>
+                    <li><strong>ネットワーク効果：</strong>ユーザーが増えるほど価値が高まる（例: Sansanの名刺データベース）</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>4. 市場タイミングの見極め</h4>
+                <div class="tag">マーケットタイミング</div>
+                <div class="tag">規制緩和</div>
+                <div class="tag">技術革新</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">タイミングが重要な理由</h4>
+                <p>ビル・グロス（Idealab創業者）の調査によると、スタートアップの成功要因の42%は「タイミング」です。</p>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功事例</h4>
+                <ul>
+                    <li><strong>newmo：</strong>日本のライドシェア規制緩和のタイミングを的確に捉えた</li>
+                    <li><strong>Sakana AI：</strong>生成AIブームの波に乗り、独自技術で差別化</li>
+                    <li><strong>五常・アンド・カンパニー：</strong>途上国の経済成長とマイクロファイナンスニーズの高まり</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>5. 十分な資金調達と効率的な使い方</h4>
+                <div class="tag">資金調達</div>
+                <div class="tag">キャッシュマネジメント</div>
+                <div class="tag">Runway確保</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">資金調達のポイント</h4>
+                <ul>
+                    <li><strong>適切なタイミング：</strong>トラクションが出始めた時に調達</li>
+                    <li><strong>十分な額：</strong>最低18-24ヶ月のRunway（活動資金）を確保</li>
+                    <li><strong>投資家選び：</strong>金額だけでなく、支援内容・ネットワークも重視</li>
+                    <li><strong>バリュエーション：</strong>高すぎるバリュエーションは次回調達を困難にする</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">効率的な資金の使い方</h4>
+                <ul>
+                    <li><strong>Unit Economics：</strong>1顧客あたりの利益が黒字化しているか</li>
+                    <li><strong>Burn Rate管理：</strong>月次の支出を厳格にコントロール</li>
+                    <li><strong>PMF前は最小限：</strong>PMF達成前は大規模な広告・営業は避ける</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>6. スケーラブルなビジネスモデル</h4>
+                <div class="tag">スケール</div>
+                <div class="tag">自動化</div>
+                <div class="tag">限界利益率</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">スケーラビリティの条件</h4>
+                <ul>
+                    <li><strong>SaaSモデル：</strong>一度開発すれば、追加コストほぼゼロで顧客を増やせる</li>
+                    <li><strong>マーケットプレイス：</strong>ネットワーク効果で自然に拡大</li>
+                    <li><strong>プラットフォーム：</strong>サードパーティが参加することで価値が増幅</li>
+                    <li><strong>自動化：</strong>人手をかけずに価値提供ができる仕組み</li>
+                </ul>
+            </div>
+
+            <div class="startup-card">
+                <h4>7. グローバル展開視点</h4>
+                <div class="tag">海外展開</div>
+                <div class="tag">世界市場</div>
+                <div class="tag">スケール</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">グローバル展開の重要性</h4>
+                <ul>
+                    <li><strong>市場規模：</strong>日本市場だけでは限界がある（特にBtoC）</li>
+                    <li><strong>バリュエーション：</strong>グローバル展開可能性がある企業は高評価</li>
+                    <li><strong>海外VC：</strong>世界トップVCからの投資を得やすい</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功事例</h4>
+                <ul>
+                    <li><strong>Sakana AI：</strong>設立当初から世界市場を見据えた技術開発</li>
+                    <li><strong>五常・アンド・カンパニー：</strong>5カ国展開、2030年までに50カ国目標</li>
+                </ul>
+            </div>
+
+            <h3>まとめ：成功の方程式</h3>
+            <div class="success">
+                <p><strong>成功 = PMF × 優秀なチーム × 差別化 × タイミング × 資金調達 × スケーラビリティ × グローバル視点</strong></p>
+                <p style="margin-top: 15px;">これらの要素をバランスよく満たすことで、スタートアップは成功確率を大きく高めることができます。</p>
+            </div>
+        </section>
+
+        <!-- 失敗要因・リスク -->
+        <section id="failure" class="section">
+            <h2>⚠️ スタートアップの失敗要因とリスク</h2>
+
+            <div class="warning">
+                <h3>スタートアップの90%が失敗する現実</h3>
+                <p>統計によると、スタートアップの約90%が5年以内に失敗すると言われています。成功事例だけでなく、失敗要因を理解することで、リスクを回避できます。</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>失敗要因 Top 10</h4>
+
+                <h4 style="margin-top: 25px; color: #667eea;">1. 市場ニーズがない（42%）</h4>
+                <ul>
+                    <li><strong>問題：</strong>誰も欲しがらない製品を作ってしまう</li>
+                    <li><strong>原因：</strong>顧客の声を聞かず、自分の思い込みで開発</li>
+                    <li><strong>対策：</strong>最低100人の潜在顧客にインタビューしてから開発開始</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">2. 資金切れ（29%）</h4>
+                <ul>
+                    <li><strong>問題：</strong>PMF達成前に資金が尽きる</li>
+                    <li><strong>原因：</strong>過剰な支出、調達のタイミングミス</li>
+                    <li><strong>対策：</strong>最低18ヶ月のRunwayを常に確保、Burn Rate厳格管理</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">3. チームの問題（23%）</h4>
+                <ul>
+                    <li><strong>問題：</strong>共同創業者間の対立、キーメンバーの離脱</li>
+                    <li><strong>原因：</strong>ビジョンの不一致、株式配分の不満</li>
+                    <li><strong>対策：</strong>創業時に役割・株式を明確化、定期的なコミュニケーション</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">4. 競合に負ける（19%）</h4>
+                <ul>
+                    <li><strong>問題：</strong>競合が同じ市場で先行・圧倒される</li>
+                    <li><strong>原因：</strong>差別化不足、競合分析の甘さ</li>
+                    <li><strong>対策：</strong>明確な差別化ポイントの確立、ニッチ市場の選択</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">5. 価格設定ミス（18%）</h4>
+                <ul>
+                    <li><strong>問題：</strong>安すぎて利益が出ない、高すぎて売れない</li>
+                    <li><strong>原因：</strong>顧客の支払い意欲を理解していない</li>
+                    <li><strong>対策：</strong>複数の価格帯でテスト、Unit Economicsの確認</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">6. ユーザー獲得の失敗（17%）</h4>
+                <ul>
+                    <li><strong>問題：</strong>良い製品なのに顧客が集まらない</li>
+                    <li><strong>原因：</strong>マーケティング戦略の欠如、CAC（顧客獲得コスト）が高すぎる</li>
+                    <li><strong>対策：</strong>LTV（顧客生涯価値）> CAC × 3を目指す</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">7. タイミングが悪い（13%）</h4>
+                <ul>
+                    <li><strong>問題：</strong>市場がまだ成熟していない、または遅すぎる</li>
+                    <li><strong>原因：</strong>市場調査不足、トレンド予測ミス</li>
+                    <li><strong>対策：</strong>市場の成長曲線を見極める</li>
+                </ul>
+            </div>
+
+            <h3>PMF達成前の典型的な失敗パターン</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>❌ 完璧主義の罠</h4>
+                    <ul>
+                        <li>Webサイトのデザインに何ヶ月もかける</li>
+                        <li>機能を全て完成させてからリリース</li>
+                        <li>ロゴ・ブランディングに過度に注力</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>正解：</strong>最小限の機能でリリース、顧客フィードバックで改善</p>
+                </div>
+                <div class="card">
+                    <h4>❌ 早すぎる拡大</h4>
+                    <ul>
+                        <li>PMF前に大規模な広告投下</li>
+                        <li>営業チームを大量採用</li>
+                        <li>オフィスを豪華にする</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>正解：</strong>PMF達成まで最小限のコストで運営</p>
+                </div>
+                <div class="card">
+                    <h4>❌ 初期成功の錯覚</h4>
+                    <ul>
+                        <li>友人・知人への販売で満足</li>
+                        <li>少数の熱狂的ユーザーだけで判断</li>
+                        <li>プロモーション効果を過大評価</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>正解：</strong>オーガニックな成長を確認するまでPMF達成と言わない</p>
+                </div>
+            </div>
+
+            <h3>日本特有の失敗要因</h3>
+
+            <div class="warning">
+                <h4>日本のスタートアップが直面する課題</h4>
+                <ul>
+                    <li><strong>起業文化の欠如：</strong>新卒一括採用が主流で、起業へのインセンティブが小さい</li>
+                    <li><strong>失敗への恐れ：</strong>一度失敗するとリカバリーが難しい社会的風土</li>
+                    <li><strong>リスク回避志向：</strong>安定志向が強く、チャレンジングな選択をしづらい</li>
+                    <li><strong>グローバル視点の欠如：</strong>国内市場だけを見て、世界を視野に入れない</li>
+                    <li><strong>「事業家」の不足：</strong>0→1を作る起業家は増えたが、1→100にする事業家が少ない</li>
+                </ul>
+            </div>
+
+            <h3>失敗を回避するためのチェックリスト</h3>
+
+            <div class="success">
+                <h4>✅ 創業前にチェックすべきこと</h4>
+                <ul>
+                    <li>□ 解決しようとしている課題は本当に存在するか？</li>
+                    <li>□ 100人以上の潜在顧客にインタビューしたか？</li>
+                    <li>□ 顧客はお金を払ってでも解決したい課題か？</li>
+                    <li>□ 競合は誰か？なぜ自分たちが勝てるのか？</li>
+                    <li>□ 市場規模は十分に大きいか？（最低100億円以上）</li>
+                    <li>□ チームに必要なスキルが揃っているか？</li>
+                    <li>□ 最低2年間のコミットメントができるか？</li>
+                </ul>
+            </div>
+
+            <div class="info">
+                <h4>✅ PMF達成までにチェックすべきこと</h4>
+                <ul>
+                    <li>□ 解約率（Churn）は月5%以下か？</li>
+                    <li>□ NPSは50以上か？</li>
+                    <li>□ オーガニックでの顧客獲得が増えているか？</li>
+                    <li>□ 顧客が自発的に他の人に勧めているか？</li>
+                    <li>□ Unit Economicsは黒字か？（LTV > CAC × 3）</li>
+                    <li>□ 18ヶ月以上のRunwayがあるか？</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 起業の進め方 -->
+        <section id="howto" class="section">
+            <h2>🚀 スタートアップ・新規事業の進め方</h2>
+
+            <div class="highlight">
+                <h3>ステージごとの戦略</h3>
+                <p>スタートアップの成長フェーズごとに、重視すべきポイントと戦略が異なります。各ステージの特徴と進め方を解説します。</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>Stage 0: アイデア検証（0-3ヶ月）</h4>
+                <div class="tag">課題発見</div>
+                <div class="tag">仮説検証</div>
+                <div class="tag">顧客理解</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">やるべきこと</h4>
+                <ul>
+                    <li><strong>課題の特定：</strong>解決すべき社会課題・顧客の痛みを明確にする</li>
+                    <li><strong>顧客インタビュー：</strong>最低100人の潜在顧客と対話</li>
+                    <li><strong>競合分析：</strong>既存のソリューション、競合を徹底調査</li>
+                    <li><strong>市場規模調査：</strong>TAM（Total Addressable Market）を算出</li>
+                    <li><strong>MVP設計：</strong>最小限の機能で価値を届けられる製品を設計</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功指標（KPI）</h4>
+                <ul>
+                    <li>顧客インタビュー数: 100人以上</li>
+                    <li>課題の深刻度: 10点満点中8点以上</li>
+                    <li>支払い意欲: 50%以上が「お金を払ってでも解決したい」と回答</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">資金調達</h4>
+                <p><strong>自己資金、FFF（Friends, Family, Fools）、エンジェル投資家</strong></p>
+                <p>調達額目安: 500万円～3,000万円</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>Stage 1: シード（3-12ヶ月）</h4>
+                <div class="tag">MVP開発</div>
+                <div class="tag">PMF探索</div>
+                <div class="tag">初期顧客獲得</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">やるべきこと</h4>
+                <ul>
+                    <li><strong>MVP開発：</strong>3ヶ月以内に最小限の機能でリリース</li>
+                    <li><strong>初期顧客獲得：</strong>10-50人のアーリーアダプターを獲得</li>
+                    <li><strong>高速改善：</strong>週次でフィードバックを反映し改善</li>
+                    <li><strong>PMFの探索：</strong>顧客の反応を見ながらピボットも検討</li>
+                    <li><strong>チーム構築：</strong>コアメンバー3-5人を採用</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功指標（KPI）</h4>
+                <ul>
+                    <li>アクティブユーザー数: 50-500人</li>
+                    <li>解約率（Churn）: 月10%以下</li>
+                    <li>NPS: 30以上</li>
+                    <li>週次成長率（WoW）: 5-10%</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">資金調達</h4>
+                <p><strong>シードVC、エンジェル投資家、アクセラレーター</strong></p>
+                <p>調達額目安: 3,000万円～3億円</p>
+                <p>バリュエーション: 3億円～10億円</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>Stage 2: アーリー（1-3年目）</h4>
+                <div class="tag">PMF達成</div>
+                <div class="tag">成長加速</div>
+                <div class="tag">組織拡大</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">やるべきこと</h4>
+                <ul>
+                    <li><strong>PMF達成：</strong>明確なPMFシグナルを確認</li>
+                    <li><strong>成長エンジン構築：</strong>再現性のある顧客獲得チャネル確立</li>
+                    <li><strong>組織拡大：</strong>チームを10-50人規模に拡大</li>
+                    <li><strong>プロダクト改善：</strong>機能追加、UX向上</li>
+                    <li><strong>Unit Economics確立：</strong>LTV > CAC × 3を達成</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功指標（KPI）</h4>
+                <ul>
+                    <li>ARR（年間経常収益）: 1億円～10億円</li>
+                    <li>解約率（Churn）: 月5%以下</li>
+                    <li>NPS: 50以上</li>
+                    <li>月次成長率（MoM）: 10-20%</li>
+                    <li>Unit Economics: LTV/CAC > 3</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">資金調達</h4>
+                <p><strong>シリーズA: 国内大手VC、海外VC</strong></p>
+                <p>調達額目安: 5億円～30億円</p>
+                <p>バリュエーション: 30億円～150億円</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>Stage 3: グロース（3-5年目）</h4>
+                <div class="tag">スケール</div>
+                <div class="tag">マーケット拡大</div>
+                <div class="tag">収益化</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">やるべきこと</h4>
+                <ul>
+                    <li><strong>急成長：</strong>ARR 100億円以上を目指す</li>
+                    <li><strong>市場拡大：</strong>新しいセグメント、地域への展開</li>
+                    <li><strong>組織強化：</strong>100人以上の組織にスケール</li>
+                    <li><strong>収益化：</strong>黒字化、またはユニットエコノミクスの改善</li>
+                    <li><strong>事業多角化：</strong>関連事業への展開</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">成功指標（KPI）</h4>
+                <ul>
+                    <li>ARR: 10億円～100億円以上</li>
+                    <li>解約率（Net Churn）: マイナス（アップセル>解約）</li>
+                    <li>成長率: YoY 50-100%</li>
+                    <li>営業利益率: 0%以上（黒字化）</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">資金調達</h4>
+                <p><strong>シリーズB・C: 大手VC、PEファンド、事業会社</strong></p>
+                <p>調達額目安: 30億円～100億円以上</p>
+                <p>バリュエーション: 150億円～1,000億円以上（ユニコーン）</p>
+            </div>
+
+            <div class="startup-card">
+                <h4>Stage 4: レイター（5年目以降）</h4>
+                <div class="tag">IPO準備</div>
+                <div class="tag">M&A検討</div>
+                <div class="tag">グローバル展開</div>
+
+                <h4 style="margin-top: 25px; color: #667eea;">やるべきこと</h4>
+                <ul>
+                    <li><strong>IPO準備：</strong>上場基準を満たす（収益性、ガバナンス等）</li>
+                    <li><strong>M&A検討：</strong>戦略的買収先との交渉</li>
+                    <li><strong>グローバル展開：</strong>海外市場への本格進出</li>
+                    <li><strong>持続的成長：</strong>安定した成長率の維持</li>
+                </ul>
+
+                <h4 style="margin-top: 25px; color: #667eea;">Exit戦略</h4>
+                <ul>
+                    <li><strong>IPO（上場）：</strong>東証グロース、プライム市場</li>
+                    <li><strong>M&A（買収）：</strong>大手企業への売却</li>
+                    <li><strong>経営継続：</strong>非上場のまま成長継続</li>
+                </ul>
+            </div>
+
+            <h3>ピボット（方向転換）のタイミング</h3>
+            <div class="warning">
+                <h4>ピボットを検討すべきサイン</h4>
+                <ul>
+                    <li>6ヶ月以上トラクションが伸びない</li>
+                    <li>解約率が改善しない（月10%以上が継続）</li>
+                    <li>顧客が明確な価値を感じていない</li>
+                    <li>Unit Economicsが成り立たない</li>
+                    <li>より大きな課題を発見した</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>重要：</strong>ピボットは失敗ではなく、学習と適応のプロセスです。成功したスタートアップの多くはピボットを経験しています。</p>
+            </div>
+        </section>
+
+        <!-- リソース集 -->
+        <section id="resources" class="section">
+            <h2>📚 起業・新規事業のリソース集</h2>
+
+            <div class="highlight">
+                <h3>スタートアップ支援リソース</h3>
+                <p>起業・新規事業を始める際に役立つリソースをまとめました。</p>
+            </div>
+
+            <h3>🏦 主要ベンチャーキャピタル（VC）</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>国内大手VC</h4>
+                    <ul>
+                        <li><strong>グロービス・キャピタル・パートナーズ：</strong>シード～レイターまで幅広く投資</li>
+                        <li><strong>JAFCO：</strong>日本最大級のVC、上場実績豊富</li>
+                        <li><strong>ANRI：</strong>シード特化、起業家支援に定評</li>
+                        <li><strong>Coral Capital：</strong>シード～アーリー、グローバル展開支援</li>
+                        <li><strong>DNX Ventures：</strong>日米特化、B2B SaaS強い</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>政府系VC</h4>
+                    <ul>
+                        <li><strong>INCJ（産業革新投資機構）：</strong>ディープテック支援</li>
+                        <li><strong>JIC VGI：</strong>研究開発型スタートアップ支援</li>
+                        <li><strong>中小企業基盤整備機構：</strong>中小企業支援</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>CVC（コーポレートVC）</h4>
+                    <ul>
+                        <li><strong>ソニー・イノベーション・ファンド</strong></li>
+                        <li><strong>三菱UFJキャピタル</strong></li>
+                        <li><strong>NTTドコモ・ベンチャーズ</strong></li>
+                        <li><strong>電通ベンチャーズ</strong></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>海外VC（日本投資）</h4>
+                    <ul>
+                        <li><strong>Khosla Ventures：</strong>AI・ディープテック</li>
+                        <li><strong>NEA：</strong>世界トップクラスVC</li>
+                        <li><strong>Sequoia Capital：</strong>レジェンドVC</li>
+                        <li><strong>Atomico：</strong>欧州代表VC</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>🏛️ 政府支援制度</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>補助金・助成金</h4>
+                    <ul>
+                        <li><strong>ものづくり補助金：</strong>最大3,000万円</li>
+                        <li><strong>事業再構築補助金：</strong>最大1.5億円</li>
+                        <li><strong>IT導入補助金：</strong>ITツール導入支援</li>
+                        <li><strong>小規模事業者持続化補助金</strong></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>融資制度</h4>
+                    <ul>
+                        <li><strong>日本政策金融公庫：</strong>新創業融資制度</li>
+                        <li><strong>信用保証協会：</strong>創業保証</li>
+                        <li><strong>自治体の制度融資</strong></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>アクセラレーター</h4>
+                    <ul>
+                        <li><strong>IVS：</strong>国内最大級</li>
+                        <li><strong>KDDI ∞ Labo</strong></li>
+                        <li><strong>01Booster</strong></li>
+                        <li><strong>Plug and Play Japan</strong></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>インキュベーション施設</h4>
+                    <ul>
+                        <li><strong>東京都：</strong>インキュベーション施設HUB</li>
+                        <li><strong>大阪：</strong>グランフロント大阪</li>
+                        <li><strong>福岡：</strong>Fukuoka Growth Next</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>📖 おすすめ書籍</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>必読書</h4>
+                    <ul>
+                        <li><strong>「起業の科学」</strong>田所雅之 - スタートアップの教科書</li>
+                        <li><strong>「リーン・スタートアップ」</strong>エリック・リース - MVP、ピボットの概念</li>
+                        <li><strong>「ゼロ・トゥ・ワン」</strong>ピーター・ティール - 独占市場を作る</li>
+                        <li><strong>「イノベーションのジレンマ」</strong>クレイトン・クリステンセン</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>実践書</h4>
+                    <ul>
+                        <li><strong>「Running Lean」</strong>アッシュ・マウリャ - リーン実践</li>
+                        <li><strong>「Traction」</strong>ガブリエル・ワインバーグ - 顧客獲得</li>
+                        <li><strong>「Hooked」</strong>ニール・イヤール - ユーザー習慣化</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>🌐 情報収集サイト</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>ニュース・メディア</h4>
+                    <ul>
+                        <li><strong>TechCrunch Japan：</strong>世界のスタートアップニュース</li>
+                        <li><strong>BRIDGE：</strong>国内スタートアップ情報</li>
+                        <li><strong>STARTUP DB：</strong>資金調達データベース</li>
+                        <li><strong>INITIAL：</strong>スタートアップリサーチ</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>データベース</h4>
+                    <ul>
+                        <li><strong>Speeda：</strong>企業・業界情報</li>
+                        <li><strong>ユーザベース：</strong>スタートアップ分析</li>
+                        <li><strong>CB Insights：</strong>グローバルVC情報</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>🎓 学習リソース</h3>
+
+            <div class="success">
+                <h4>オンライン学習</h4>
+                <ul>
+                    <li><strong>Y Combinator Startup School：</strong>無料オンライン講座（英語）</li>
+                    <li><strong>Udemy：</strong>スタートアップ関連コース多数</li>
+                    <li><strong>Coursera：</strong>海外トップ大学の起業講座</li>
+                    <li><strong>YouTube：</strong>Y Combinator、a16zなど有名VCのチャンネル</li>
+                </ul>
+            </div>
+
+            <h3>🤝 コミュニティ</h3>
+
+            <div class="info">
+                <h4>起業家コミュニティ</h4>
+                <ul>
+                    <li><strong>スタートアップJPN：</strong>国内最大級コミュニティ</li>
+                    <li><strong>Startup Weekend：</strong>週末起業イベント</li>
+                    <li><strong>Meetup：</strong>各種スタートアップイベント</li>
+                    <li><strong>connpass：</strong>技術系イベント情報</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="section">
+            <h2>🎯 まとめ</h2>
+
+            <div class="highlight">
+                <h3>2024-2025年のスタートアップ市場</h3>
+                <ul>
+                    <li>資金調達総額7,793億円と回復基調にある</li>
+                    <li>生成AI、ディープテック、Climate Techが注目領域</li>
+                    <li>海外投資家の日本市場への関心が高まっている</li>
+                    <li>政府が2027年までに10兆円規模の投資を目指す</li>
+                </ul>
+            </div>
+
+            <div class="success">
+                <h3>成功の鍵</h3>
+                <ul>
+                    <li><strong>PMFへの徹底的な集中：</strong>顧客の声を聞き、高速で改善</li>
+                    <li><strong>優秀なチーム：</strong>補完的なスキルと共通のビジョン</li>
+                    <li><strong>明確な差別化：</strong>独自技術・ビジネスモデルで競合優位性確立</li>
+                    <li><strong>タイミング：</strong>市場の成長曲線を見極める</li>
+                    <li><strong>グローバル視点：</strong>最初から世界市場を見据える</li>
+                </ul>
+            </div>
+
+            <div class="info">
+                <h3>次のアクション</h3>
+                <ol>
+                    <li><strong>課題を見つける：</strong>身の回りの社会課題、自分が情熱を持てる領域を探す</li>
+                    <li><strong>顧客と話す：</strong>100人以上の潜在顧客にインタビュー</li>
+                    <li><strong>MVPを作る：</strong>3ヶ月以内に最小限の製品をリリース</li>
+                    <li><strong>フィードバックを集める：</strong>顧客の声を聞いて高速で改善</li>
+                    <li><strong>PMFを目指す：</strong>顧客が本当に欲しがる製品を作る</li>
+                    <li><strong>資金調達：</strong>トラクションが出たタイミングで調達</li>
+                    <li><strong>スケール：</strong>PMF達成後に一気に成長加速</li>
+                </ol>
+            </div>
+
+            <div class="warning">
+                <p style="font-size: 1.1rem; line-height: 2;"><strong>重要なメッセージ：</strong></p>
+                <p style="font-size: 1.05rem; line-height: 2;">スタートアップの90%は失敗しますが、それは挑戦した証です。失敗から学び、次に活かすことで、成功確率は大きく高まります。日本には優秀な人材と技術があり、政府の支援も充実しています。あとは「一歩を踏み出す勇気」だけです。</p>
+                <p style="font-size: 1.2rem; margin-top: 20px; text-align: center; font-weight: 700;">あなたのアイデアが、次のユニコーンになるかもしれません。🦄</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="scroll-top" onclick="scrollToTop()">↑</div>
+
+    <footer>
+        <p>&copy; 2024-2025 スタートアップ・新規事業リサーチ | データに基づいた意思決定を支援します</p>
+    </footer>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // トップへ戻るボタン
+        const scrollTopBtn = document.querySelector('.scroll-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // セクションのフェードインアニメーション
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // アクティブナビゲーションのハイライト
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '#f8f9fa';
+                link.style.color = '#667eea';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                    link.style.color = 'white';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
