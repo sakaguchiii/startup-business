@@ -23,6 +23,14 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
         }
 
         header {
@@ -62,38 +70,130 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             padding: 20px;
-            margin-bottom: 40px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             position: sticky;
             top: 20px;
             z-index: 100;
+            width: 280px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        nav h3 {
+            color: #667eea;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s;
+        }
+
+        .nav-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        nav li {
+            margin: 0;
         }
 
         nav a {
             text-decoration: none;
             color: #667eea;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 25px;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 8px;
             transition: all 0.3s;
-            background: #f8f9fa;
-            font-size: 0.95rem;
+            background: transparent;
+            font-size: 0.9rem;
+            display: block;
+            border-left: 3px solid transparent;
         }
 
         nav a:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        nav a.active {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            border-left-color: #764ba2;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                position: relative;
+                top: 0;
+                max-height: none;
+                margin-bottom: 20px;
+            }
+
+            .nav-toggle {
+                display: block;
+                width: 100%;
+            }
+
+            nav h3 {
+                display: none;
+            }
+
+            nav ul {
+                display: none;
+                gap: 10px;
+                margin-top: 15px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav a {
+                text-align: center;
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 25px;
+            }
         }
 
         .section {
@@ -509,7 +609,9 @@
 
     <div class="container">
         <nav>
-            <ul>
+            <button class="nav-toggle" onclick="toggleNav()">📱 目次を開く</button>
+            <h3>📑 目次</h3>
+            <ul id="navMenu">
                 <li><a href="#overview">市場概況</a></li>
                 <li><a href="#trends">2024-25トレンド</a></li>
                 <li><a href="#startups">注目スタートアップ</a></li>
@@ -524,6 +626,7 @@
             </ul>
         </nav>
 
+        <div class="main-content">
         <!-- 市場概況 -->
         <section id="overview" class="section">
             <h2>📊 2024-2025年 スタートアップ市場概況</h2>
@@ -2141,7 +2244,8 @@
                 <p style="font-size: 1.2rem; margin-top: 20px; text-align: center; font-weight: 700;">あなたのアイデアが、次のユニコーンになるかもしれません。🦄</p>
             </div>
         </section>
-    </div>
+        </div><!-- .main-content -->
+    </div><!-- .container -->
 
     <div class="scroll-top" onclick="scrollToTop()">↑</div>
 
@@ -2150,6 +2254,19 @@
     </footer>
 
     <script>
+        // ハンバーガーメニュートグル
+        function toggleNav() {
+            const navMenu = document.getElementById('navMenu');
+            const navToggle = document.querySelector('.nav-toggle');
+            navMenu.classList.toggle('active');
+
+            if (navMenu.classList.contains('active')) {
+                navToggle.textContent = '📱 目次を閉じる';
+            } else {
+                navToggle.textContent = '📱 目次を開く';
+            }
+        }
+
         // スムーススクロール
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -2157,6 +2274,14 @@
                 const targetId = this.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
                 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // スマホ表示時はメニューを自動的に閉じる
+                if (window.innerWidth <= 768) {
+                    const navMenu = document.getElementById('navMenu');
+                    const navToggle = document.querySelector('.nav-toggle');
+                    navMenu.classList.remove('active');
+                    navToggle.textContent = '📱 目次を開く';
+                }
             });
         });
 
@@ -2203,11 +2328,9 @@
             });
 
             navLinks.forEach(link => {
-                link.style.background = '#f8f9fa';
-                link.style.color = '#667eea';
+                link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
-                    link.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                    link.style.color = 'white';
+                    link.classList.add('active');
                 }
             });
         });
